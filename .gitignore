@@ -9,3 +9,6 @@ package-lock.json
 
 # npm packages
 node_modules
+
+# dist directory
+dist

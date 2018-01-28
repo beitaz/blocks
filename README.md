@@ -1,6 +1,6 @@
 # Blocks
 
-## Create Project
+## 创建项目
 
 ```shell
 $ mkdir blocks && cd blocks
@@ -14,4 +14,9 @@ $ git add .
 $ git commit -m "Init project"
 $ git remote add origin git@github.com:beitaz/blocks.git
 $ git push -u origin master
+$ mkdir src && touch src/index.js && touch webpack.config.js
+$ npm install rimraf html-webpack-plugin --save-dev
+$ npm install babel-loader babel-core babel-preset-env babel-preset-react --save-dev
 ```
+
+*提示：* 使用 `npm prune` 删除不需要的依赖包。

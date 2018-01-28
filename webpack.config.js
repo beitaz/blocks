@@ -19,10 +19,17 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
-      options: {
-        presets: ['env', 'react']
-      }
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: ['env', 'react']
+        }
+      }, {
+        loader: 'eslint-loader',
+        options: {
+          enforce: 'pre'
+        }
+      }]
     }]
   },
   plugins: [
@@ -35,9 +42,9 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'public/blockly_compressed.js',
       to: 'blockly_compressed.js'
-    },{
+    }, {
       from: 'public/blocks_compressed.js',
       to: 'blocks_compressed.js'
     }])
   ]
-}
+};

@@ -18,6 +18,7 @@ $ mkdir src && touch src/index.js && touch webpack.config.js
 $ npm install rimraf html-webpack-plugin --save-dev
 $ npm install babel-loader babel-core babel-preset-env babel-preset-react --save-dev
 $ npm install copy-webpack-plugin --save-dev
+$ npm install eslint eslint-loader eslint-plugin-react --save-dev
 ```
 
 *提示：* 使用 `npm prune` 删除不需要的依赖包。

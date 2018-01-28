@@ -50,6 +50,9 @@ module.exports = {
     }, {
       from: 'public/blocks_compressed.js',
       to: 'blocks_compressed.js'
+    },{
+      from: 'public/zh-hans.js',
+      to: 'zh-hans.js'
     }])
   ]
 };

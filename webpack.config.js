@@ -54,5 +54,16 @@ module.exports = {
       from: 'public/zh-hans.js',
       to: 'zh-hans.js'
     }])
-  ]
+  ],
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    compress: true,
+    // host: 'localhost',
+    // port: 8081,
+    // proxy: 'http://localhost:8087',
+    open: 'Safari', // true 或者 浏览器名称 'Google Chrome', 'Firefox', 'Safari'
+    // headers: { // 为所有响应添加额外的头信息
+    //   'X-Custom-Foo': 'bar'
+    // }
+  }
 };

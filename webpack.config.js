@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -30,9 +30,14 @@ module.exports = {
           enforce: 'pre'
         }
       }]
+    },{
+      test: /\.s?css/,
+      exclude: /node_modules/,
+      use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
     }]
   },
   plugins: [
+    require('autoprefixer'),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       title: 'Blocks',
